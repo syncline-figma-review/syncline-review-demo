@@ -1,0 +1,34 @@
+{
+  "framework": "react",
+  "styling": "styled-components",
+  "libraryName": "syncline-review-demo",
+  "dependencies": {
+    "install": true
+  },
+  "stories": {
+    "groupByPage": true
+  },
+  "components": {
+    "prune": true
+  },
+  "theme": {
+    "cssReset": true,
+    "brand": {
+      "title": "syncline-review-demo",
+      "colorToken": "brand/primary"
+    }
+  },
+  "inputs": {
+    "design": ".syncline/design.json",
+    "enriched": ".syncline/design.enriched.json",
+    "assets": ".syncline/assets.json"
+  },
+  "paths": {
+    "components": "src/components",
+    "assetsRoot": "src",
+    "theme": "src/providers/ThemeProvider",
+    "docs": "src/docs",
+    "storybook": ".storybook",
+    "tsconfig": "tsconfig.json"
+  }
+}
