@@ -1,0 +1,71 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Colour tokens from the design file. Read them in styled-components as `theme['border']['default']`.
+
+## Color
+
+#### Light
+
+<ColorPalette>
+  <ColorItem title={"border"} subtitle="" colors={{ default: "#d1d5db" }} />
+  <ColorItem
+    title={"brand"}
+    subtitle=""
+    colors={{ primary: "#4f46e5", "primary-hover": "#4338ca" }}
+  />
+  <ColorItem
+    title={"status"}
+    subtitle=""
+    colors={{
+      "neutral-bg": "#e5e7eb",
+      "neutral-text": "#374151",
+      "success-bg": "#dcfce7",
+      "success-text": "#166534",
+    }}
+  />
+  <ColorItem
+    title={"surface"}
+    subtitle=""
+    colors={{ default: "#ffffff", subtle: "#f3f4f6" }}
+  />
+  <ColorItem
+    title={"text"}
+    subtitle=""
+    colors={{ disabled: "#9ca3af", "on-brand": "#ffffff", primary: "#111827" }}
+  />
+</ColorPalette>
+
+#### Dark
+
+<ColorPalette>
+  <ColorItem title={"border"} subtitle="" colors={{ default: "#374151" }} />
+  <ColorItem
+    title={"brand"}
+    subtitle=""
+    colors={{ primary: "#818cf8", "primary-hover": "#a5b4fc" }}
+  />
+  <ColorItem
+    title={"status"}
+    subtitle=""
+    colors={{
+      "neutral-bg": "#374151",
+      "neutral-text": "#e5e7eb",
+      "success-bg": "#14532d",
+      "success-text": "#bbf7d0",
+    }}
+  />
+  <ColorItem
+    title={"surface"}
+    subtitle=""
+    colors={{ default: "#111827", subtle: "#1f2937" }}
+  />
+  <ColorItem
+    title={"text"}
+    subtitle=""
+    colors={{ disabled: "#6b7280", "on-brand": "#111827", primary: "#f9fafb" }}
+  />
+</ColorPalette>

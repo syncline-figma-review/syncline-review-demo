@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "fonts": [
+    {
+      "family": "Inter",
+      "provider": "fontsource",
+      "id": "inter",
+      "variable": true,
+      "category": "sans-serif",
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "italic",
+        "normal"
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,132 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+## Text styles
+
+### Body\/Regular
+
+<p
+  style={{
+    fontFamily: "var(--font-inter, 'Inter'), sans-serif",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "20px",
+    margin: 0,
+  }}
+>
+  The quick brown fox jumps over the lazy dog
+</p>
+
+`Inter` · 14px · weight 400 · line height 20px
+
+### Heading\/Large
+
+<p
+  style={{
+    fontFamily: "var(--font-inter, 'Inter'), sans-serif",
+    fontSize: "24px",
+    fontWeight: "600",
+    lineHeight: "32px",
+    margin: 0,
+  }}
+>
+  The quick brown fox jumps over the lazy dog
+</p>
+
+`Inter` · 24px · weight 600 · line height 32px
+
+### Label\/Medium
+
+<p
+  style={{
+    fontFamily: "var(--font-inter, 'Inter'), sans-serif",
+    fontSize: "14px",
+    fontWeight: "500",
+    lineHeight: "20px",
+    margin: 0,
+  }}
+>
+  The quick brown fox jumps over the lazy dog
+</p>
+
+`Inter` · 14px · weight 500 · line height 20px
+
+### Label\/Small
+
+<p
+  style={{
+    fontFamily: "var(--font-inter, 'Inter'), sans-serif",
+    fontSize: "12px",
+    fontWeight: "500",
+    lineHeight: "16px",
+    margin: 0,
+  }}
+>
+  The quick brown fox jumps over the lazy dog
+</p>
+
+`Inter` · 12px · weight 500 · line height 16px
+
+## Fonts
+
+Components read each font through a CSS custom property, with the family name as fallback (for example `font-family: var(--font-inter, 'Inter'), sans-serif`). Define the property to load the font however your app does; the library itself ships no font files.
+
+<table className="uk-table">
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Weights</th>
+      <th>CSS variable</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>{"Inter"}</code>
+      </td>
+      <td>{"400, 500, 600"}</td>
+      <td>
+        <code>{"--font-inter"}</code>
+      </td>
+      <td>{"Fontsource (loaded in Storybook)"}</td>
+    </tr>
+  </tbody>
+</table>
+
+### Use your own font loader
+
+With Next.js, bind `Inter` to its variable:
+
+```tsx
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+export default function RootLayout({ children }) {
+  return (
+    <html className={inter.variable}>
+      <body>{children}</body>
+    </html>
+  );
+}
+```
+
+Without a font loader, define the variable yourself, after loading the font:
+
+```css
+:root {
+  --font-inter: "Inter";
+}
+```
+
+Storybook loads the fonts listed above itself (see `fonts` in `syncline.config.json`).
+
+<style>
+  {
+    "table.uk-table { width: 100%; border-collapse: collapse; }\ntable.uk-table tr, table.uk-table tr:nth-of-type(2n) { background: transparent; border: 0; }\ntable.uk-table tr th, table.uk-table tr td { border: 0; border-bottom: 1px solid color-mix(in srgb, currentColor 14%, transparent); padding: 10px 16px 10px 0; text-align: left; vertical-align: middle; }\ntable.uk-table tr th { font-weight: 600; border-bottom-color: color-mix(in srgb, currentColor 30%, transparent); }\ntable.uk-table tr th:last-child, table.uk-table tr td:last-child { padding-right: 0; }\ntable.uk-table code { font-size: 12.5px; }"
+  }
+</style>

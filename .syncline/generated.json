@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "files": {
+    "src/components/Button/Button.stories.tsx": "587f3bfdfbf23185",
+    "src/components/Button/Button.tsx": "0bcacca7377a4313",
+    "src/components/Button/index.ts": "110d7e174d33c600",
+    "src/components/Tag/Tag.stories.tsx": "1aacd7c9eb9ae93b",
+    "src/components/Tag/Tag.tsx": "ac7fdb09ae20e687",
+    "src/components/Tag/index.ts": "f2cec0a3dc15880a"
+  }
+}

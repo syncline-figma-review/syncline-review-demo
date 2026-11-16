@@ -1,0 +1,23 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Guidelines/Introduction" />
+
+# syncline\-review\-demo
+
+A React component library generated from the Figma design file. Components, tokens and these docs are produced by the Syncline pipeline; do not edit generated files by hand — change the design and re-sync.
+
+## Components
+
+- **Components**: Button, Tag
+
+## Setup
+
+Wrap your app in the generated provider so components can read design tokens:
+
+```tsx
+import { ThemeProvider } from "syncline-review-demo/providers/ThemeProvider";
+
+<ThemeProvider modes={{/* e.g. Color: "Dark" */}}>
+  <App />
+</ThemeProvider>;
+```
